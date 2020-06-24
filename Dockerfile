@@ -112,6 +112,8 @@ RUN set -ex; \
 	chown -R www-data:www-data wp-content; \
 	chmod -R 777 wp-content
 
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
 VOLUME /var/www/html
 
 CMD ["apache2-foreground"]
