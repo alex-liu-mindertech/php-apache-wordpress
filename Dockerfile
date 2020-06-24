@@ -96,4 +96,5 @@ COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 
 VOLUME /var/www/html
 
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
